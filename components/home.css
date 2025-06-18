@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+body{
+  display: flex;
+  align-items: center;
+}
+
+.home-container{
+  width: 100%;
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+}
+  .home-left {
+    justify-content: center;
+    padding-top: 80px; 
+    padding-left: 50px;
+    width: 60%;
+  }
+  .home-right { 
+    justify-content: center;
+    padding-top: 80px; 
+    padding-left: 50px;
+    width: 40%;
+  }
+  .home-right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  } 
+
+  
+.wrapper{
+  display: flex;
+}
+.wrapper .static-txt{
+  color: #000;
+  font-size: 50px;
+  font-weight: 450;
+  margin-top: 20px;
+}
+.wrapper .dynamic-txts{
+  height: 100px;
+  line-height: 100px;
+  overflow: hidden;
+}
+.dynamic-txts li{
+  list-style: none;
+  color: navy;
+  font-size: 50px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(1) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+  line-height: 90px;
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: white;
+  border-left: 2px solid #000;
+  animation: typing 4s steps(20) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
+  
+  .home-left p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: grey;
+  }
+  
+  .home-left button {
+    margin-left: 43%;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-left button:hover {
+    background-color: #0056b3; 
+   }
+  
+ 
+
+  
+  
+  
+  /* Responsive design for mobile devices  */
+   @media(max-width: 768px) {
+    .home {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .home-left {
+      padding-left: 0;
+      padding: 20px;
+    }
+  
+    .home-right img {
+      max-width: 80%;
+    }
+  }
+   
